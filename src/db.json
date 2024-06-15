@@ -1,0 +1,89 @@
+{
+    "users": 
+    [
+        {
+          "id": 1,
+          "name": "Emma Johnson",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671132.jpg?w=740&t=st=1717836528~exp=1717837128~hmac=efd3330e4a0150a31195ec331f4f794aa488c5492ba4c34644dd207b75eccf7b",
+          "comment": "Exceptional resource for new parents! The online consultations are incredibly helpful and the advice is spot-on. Thank you for making this service available!",
+          "country": "Canada"
+        },
+        {
+          "id": 2,
+          "name": "Liam Smith",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671159.jpg?w=740&t=st=1717867541~exp=1717868141~hmac=6640bcc1e7f45da2dfa1dcf643deca2c26f30a661ff58e4e38792bdb524c74ad",
+          "comment": "I love the ease of booking consultations and the quick responses from experts. This site has been a lifesaver for our baby’s health concerns.",
+          "country": "Japan"
+        },
+        {
+          "id": 3,
+          "name": "Olivia Brown",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671120.jpg?w=740&t=st=1717867560~exp=1717868160~hmac=e7d02085cc3e384111fec201f1d7cccb44510012e8b5ce355bed08a2e9435fb9",
+          "comment": "A fantastic website with reliable and comprehensive information. The developmental support section has been especially useful for tracking my baby's milestones.",
+          "country": "Brazil"
+        },
+        {
+          "id": 4,
+          "name": "Noah Davis",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671151.jpg?t=st=1717836528~exp=1717837128~hmac=09ee663bbfafb8e2c785e943782a4347ed63f28996746d0b00ebbc20efc66769",
+          "comment": "Such a user-friendly platform with excellent customer service. The nutrition monitoring tips have really helped improve my baby's diet.",
+          "country": "Germany"
+        },
+        {
+          "id": 5,
+          "name": "Ava Wilson",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671165.jpg?t=st=1717858543~exp=1717859143~hmac=fd80a256b7dbda768416a000302f46fe8b52515db8c8bd5b9fcdcbc3d4f37f8c",
+          "comment": "I highly recommend this site to all parents. The free consultations are thorough and informative, and the resources available are top-notch.",
+          "country": "Egypt"
+        },
+        {
+          "id": 6,
+          "name": "Mason Miller",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?t=st=1717858543~exp=1717859143~hmac=1bb1e3856fac7f9418bfc1cd287c4c25a5b80b401f3f741a2cf29418965972f6",
+          "comment": "This website is a treasure trove of information! The advice I received was practical and easy to implement. It’s my go-to for all baby-related queries.",
+          "country": "Australia"
+        },
+        {
+          "id": 7,
+          "name": "Sophia Moore",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671140.jpg?w=740&t=st=1717867670~exp=1717868270~hmac=8804053b44fa89d0cf62a3a500a15bdb2d3cb50c8bd44a3a7b5c41e2d918cbe6",
+          "comment": "Great service and very knowledgeable consultants. The booking process is simple and the follow-up care is outstanding. Keep up the good work!",
+          "country": "South Africa"
+        },
+        {
+          "id": 8,
+          "name": "James Taylor",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671124.jpg?w=740&t=st=1717867686~exp=1717868286~hmac=d763e3cc179f8a1fd86ee17e5cb11cada78c1accc836ab9e9d64fc410d3feadc",
+          "comment": "I appreciate the focused and relevant advice for baby consultations. It’s clear that the experts are dedicated to helping parents and caregivers.",
+          "country": "Italy"
+        },
+        {
+          "id": 9,
+          "name": "Isabella Anderson",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671153.jpg?w=740&t=st=1717867704~exp=1717868304~hmac=7a1751ed60124ba78968186846cfbdd4926733801051e4908bbcc738b2f5ea82",
+          "comment": "Impressive site with detailed and accurate information. The health and wellness tips have been incredibly beneficial for our family.",
+          "country": "Philippines"
+        },
+        {
+          "id": 10,
+          "name": "Elijah Thomas",
+          "avatar": "https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671134.jpg?w=740&t=st=1717867721~exp=1717868321~hmac=ab5b2480959ba9d47987f75e913363cc60e050e68aaa7655ad2f96edc91a63c9",
+          "comment": "Amazing platform! The developmental support and nutritional guidance have greatly contributed to my baby's growth and overall well-being. Highly recommended!",
+          "country": "Mexico"
+        },
+        {
+            "id": 11,
+            "name": "Michael Roberts",
+            "avatar": "https://img.freepik.com/free-photo/3d-illustration-teenager-with-funny-face-glasses_1142-50955.jpg?t=st=1718008494~exp=1718012094~hmac=2023acb429dc18a1983077027b7094bd5f123c67a0dce005fbe5d6f56beb42a8&w=740",
+            "comment": "I can't thank you enough for this service. The ease of booking consultations and the quality of advice is outstanding. It's comforting to have such reliable support available at our fingertips.",
+            "country": "France"
+        }, 
+        {
+            "id": 12,
+            "name": "Sarah Thompson",
+            "avatar": "https://img.freepik.com/free-photo/3d-illustration-teenage-girl-with-hoodie_1142-32303.jpg?t=st=1718008603~exp=1718012203~hmac=58e9e3e84b33938391d97cab5f6ee8073590057d88a8f256188439ea8d851fcd&w=740",
+            "comment": "This website is incredibly helpful! The free online consultations have been a great resource for me as a new parent. The information provided is always accurate and very reassuring.",
+            "country": "New Zealand"
+        }
+    ]
+}

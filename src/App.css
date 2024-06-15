@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.services {
+  background-color: #d0e7fb
+}
+
+.nav--li {
+  margin: 0 20px 0 20px;
+  padding: 10px 5px;
+  cursor: pointer;
+  
+}
+
+.cover--hero {
+  background-image: url('./assets/images/eatingToddler.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (width > 768px) {
+  .menu--icon {
+    display: none;
+  }
+}
+
+@media (width <= 768px) {
+  .menu--icon {
+    visibility: visible;
+  }
+
+  .nav--container {
+    display: none;
+  }
+
+  .group-btn {
+    margin: 15px 0 0 15px
+  }
+
+  
+}
+
+@media (width <=640px) {
+  .faqsImg {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    z-index: -1;
+    opacity: 15%;
+    transform: translate(-50%, 0)
+  }
+}
