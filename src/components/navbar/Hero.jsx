@@ -1,5 +1,5 @@
 import React from 'react';
-import twoDoctors from '../../assets/images/eatingToddler.jpg';
+import twoDoctors from '../../assets/images/healthWellness.jpg';
 
 function Hero() {
     return (

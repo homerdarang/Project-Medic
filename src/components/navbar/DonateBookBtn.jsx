@@ -30,7 +30,7 @@ function DonateBookBtn() {
 
     return (
         <div className='flex w-max flex-col gap-4 ms-3 group-btn'>
-            <ButtonGroup className='bg-transparent' variant='outlined' ripple={true} size='sm'>
+            <ButtonGroup className='bg-transparent' variant='outlined' size='sm'>
                 <Link to={'/donate'}>
                     <Button className='flex place-items-center bg-yellow-600 text-gray-600 hover:text-white hover:bg-gray-700 rounded-s-full ps-3  transition-all ease-linear'>
                         <span className='me-2'><FaDonate /></span>
