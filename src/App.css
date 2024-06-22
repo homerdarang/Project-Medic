@@ -21,10 +21,10 @@ html {
 }
 
 .cover--hero {
-  background-image: url('./assets/images/eatingToddler.jpg');
-  background-size: cover;
+  background: url('./assets/images/healthWellness.jpg') center/cover no-repeat;
+  /* background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
 }
 
 @media (width > 768px) {
