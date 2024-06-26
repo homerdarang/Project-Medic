@@ -9,8 +9,8 @@ function Nav() {
 
     const navbar = ['Home', 'About', 'Contact', 'FAQs'];
     const navigation = navbar.map((nav) => (
-        <Link key={nav} to={`/${nav.toLowerCase()}`} className='nav--li hover:rounded-full py-1 px-3 hover:bg-blue-600 hover:text-yellow-400 hover:scale-105 active:scale-95 transition-all ease-linear'>{nav}</Link>
-    ));
+        nav === 'Home' ? <Link to={'/'} className='nav--li hover:rounded-full py-1 px-3 hover:bg-blue-600 hover:text-yellow-400 hover:scale-105 active:scale-95 transition-all ease-linear' key={nav}>{nav}</Link> : <Link to={`/${nav.toLowerCase()}`} className='nav--li hover:rounded-full py-1 px-3 hover:bg-blue-600 hover:text-yellow-400 hover:scale-105 active:scale-95 transition-all ease-linear' key={nav}>{nav}</Link>))
+    // <Link key={nav} to={`/${nav.toLowerCase()}`} className='nav--li hover:rounded-full py-1 px-3 hover:bg-blue-600 hover:text-yellow-400 hover:scale-105 active:scale-95 transition-all ease-linear' > {nav}</Link >
 
     const navigate = <>
         <div className='lg:hidden block absolute top-16 w-full bg-blue-500 left-0 right-0 navigate'>
