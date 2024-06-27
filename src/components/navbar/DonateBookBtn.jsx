@@ -31,17 +31,13 @@ function DonateBookBtn() {
     return (
         <div className='flex w-max flex-col gap-4 ms-3 group-btn'>
             <ButtonGroup className='bg-transparent' variant='outlined' size='sm'>
-                <Link to={'/donate'}>
-                    <Button className='flex place-items-center bg-yellow-600 text-gray-600 hover:text-white hover:bg-gray-700 rounded-s-full ps-3  transition-all ease-linear'>
-                        <span className='me-2'><FaDonate /></span>
-                        Donate
-                    </Button>
+                <Link to={'/donate'} className='flex place-items-center bg-yellow-600 text-gray-600 px-3 font-semibold text-sm outline-none hover:text-white hover:bg-gray-700 rounded-s-full ps-3  transition-all ease-linear'>
+                    <span className='me-2'><FaDonate /></span>
+                    Donate
                 </Link>
-                <Link to={'/book-now'}>
-                    <Button className='flex place-items-center bg-white text-gray-600 hover:bg-gray-700 hover:text-white rounded-e-full ps-2 py-3 transition-all ease-linear'>
-                        <span className='me-2'><FaCalendarAlt /></span>
-                        Book Now
-                    </Button>
+                <Link to={'/book-now'} className='flex place-items-center bg-white text-gray-600 px-3 font-semibold text-sm outline-none hover:bg-gray-700 hover:text-white rounded-e-full ps-2 py-3 transition-all ease-linear'>
+                    <span className='me-2'><FaCalendarAlt /></span>
+                    Book Now
                 </Link>
             </ButtonGroup >
         </div >
