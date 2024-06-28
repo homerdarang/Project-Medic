@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import gcashImg from '../../src/assets/imgPayment/gcash.png';
 import grabPayImg from '../../src/assets/imgPayment/GrabPay-header.jpg';
@@ -8,12 +8,23 @@ import paypalImg from '../../src/assets/imgPayment/pngegg.png';
 import visaCard from '../../src/assets/imgPayment/Visa_Logo.png';
 import masterCard from '../../src/assets/imgPayment/Mastercard-Logo.wine.png';
 
+import { RiArrowGoBackFill } from "react-icons/ri";
+
 function Donate() {
+    const navigate = useNavigate();
+
   return (
     <>
         <div className='lg:w-1/2 md:w-2/3 sm:w-3/4 w-4/5 m-auto mt-48'>
-            <div className='border text-gray-500 rounded-3xl px-10 py-20'>
-                <div className='grid gap-4 w-2/3 m-auto'>
+            <div className='border text-gray-500 rounded-3xl px-10 py-20 relative'>
+                <div className='font-semibold md:text-2xl text-xl absolute bg-gray-50 border px-5 py-6 rounded-2xl payment--title text-center'>
+                    <h1>Choose your payment method</h1>
+                </div>
+                <div className='grid gap-4 md:w-2/3 w-5/6 m-auto'>
+                    <button onClick={() => navigate(-1)} className='border-2 ps-5 py-2 max-w-32 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
+                        <RiArrowGoBackFill className='me-2' />
+                        Go Back
+                    </button>
                     <p className='text-xl mb-5'>How would you like to donate?</p>
                     <div className='border px-4 bg-gray-50 py-2 rounded-md flex justify-between place-items-center'>
                         <p>Gcash</p>

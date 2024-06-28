@@ -22,9 +22,12 @@ html {
 
 .cover--hero {
   background: url('./assets/images/healthWellness.jpg') center/cover no-repeat;
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
+}
+
+.payment--title {
+  top: -8%;
+  left:20%;
+  right: 20%;
 }
 
 @media (width > 768px) {
