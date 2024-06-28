@@ -13,6 +13,7 @@ import MentalDevelopment from './components/services_offeed/MentalDevelopment';
 import HealthAndWellness from './components/services_offeed/HealthAndWellness';
 import SleepConsultation from './components/services_offeed/SleepConsultation';
 import ParentingTechniques from './components/services_offeed/ParentingTechniques';
+import Donate from './components/Donate';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/health-wellness' element={<HealthAndWellness />} />
           <Route path='/sleep-consultation' element={<SleepConsultation />} />
           <Route path='/parenting-techniques' element={<ParentingTechniques />} />
+          <Route path='/donate' element={<Donate />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>
