@@ -3,13 +3,22 @@ import motherToddler from '../../assets/images/Mother&Toddler.jpg';
 import Footer from '../Footer';
 
 import { MdLabelImportant } from "react-icons/md";
+import { RiArrowGoBackFill } from "react-icons/ri";
+
+import { useNavigate } from 'react-router-dom';
 
 
 function NutritionMonitoring() {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className='md:mt-44 mt-24 w-2/3 m-auto text-gray-800'>
-                <div className=''>
+                <div>
+                    <button onClick={() => navigate(-1)} className='border-2 ps-5 pe-4 py-2 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
+                        <RiArrowGoBackFill className='me-2' />
+                        Go back
+                    </button>
                     <div className='divide-y divide-blue-400 '>
                         <p className='uppercase py-3 text-xl font-bold tracking-wide'>Today's Top Topic</p>
                         <h1 className='py-2 md:text-4xl text-2xl font-medium text-blue-400'>Nutrition Monitoring</h1>
