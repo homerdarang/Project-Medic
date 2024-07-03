@@ -17,8 +17,8 @@ function Donate() {
     <>
         <div className='lg:w-1/2 md:w-2/3 sm:w-3/4 w-4/5 m-auto mt-48 '>
             <div className='border text-gray-700 rounded-3xl px-10 py-20 relative'>
-                <div className='font-semibold absolute bg-gray-50 border px-5 py-6 rounded-2xl lg:-top-12 md:-top-14 sm:-top-12 payment--title text-center'>
-                    <h1 className='md:text-2xl text-xl'>Choose your donation method</h1>
+                <div className='font-semibold absolute bg-gray-50 border px-5 py-6 rounded-2xl payment--title text-center'>
+                    <h1 className='md:text-2xl text-xl'>Choose your payment method</h1>
                 </div>
                 <div className='grid gap-4 md:w-2/3 w-5/6 m-auto'>
                     <button onClick={() => navigate(-1)} className='border-2 ps-5 py-2 max-w-32 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
