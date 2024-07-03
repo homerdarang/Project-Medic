@@ -31,7 +31,7 @@ function Nav() {
             <nav>
                 <div className='bg-blue-400 lg:rounded-full lg:mt-10 lg:max-w-7xl m-auto fixed w-full top-0 left-0 right-0 lg:px-11 lg:py-4 px-5 py-3 flex justify-between place-items-center z-50'>
                     <div className='me-10'>
-                        <Link to={'/'} className='text-white outline-none text-4xl font-semibold'>&#8478;</Link>
+                        <Link to={'/home'} className='text-white outline-none text-4xl font-semibold'>&#8478;</Link>
                     </div>
                     <div className='nav--container'>
                         <ul className='flex place-items-center text-white'>
