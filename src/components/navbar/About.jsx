@@ -6,12 +6,24 @@ import { MdHomeRepairService } from "react-icons/md";
 import { SiZend } from "react-icons/si";
 import Footer from '../Footer';
 
+import { Link } from 'react-router-dom';
+
+import { RiArrowGoBackFill } from "react-icons/ri";
+
 function About() {
     return (
         <>
             <div className='md:px-28 md:py-24 px-16 mt-16 py-14 lg:mt-24 md:mt-20 text-gray-800'>
+                
                 <div className='lg:flex lg:justify-center m-auto lg:w-3/4'>
-                    <img className='lg:h-60 md:w-60 lg:m-8 md:m-4 md:float-start w-40 mx-auto my-2 rounded-full' src={aboutImg} alt="Lady Doctor Smiling" />
+                    <div className=''>
+                        <Link to={'/'} className='border-2 ps-5 py-2 pe-4 max-w-32 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
+                            <RiArrowGoBackFill className='me-2' />
+                            Go Back
+                        </Link>
+                        <img className='lg:h-60 md:w-60 lg:m-8 md:m-4 md:float-start w-40 mx-auto my-2 rounded-full' src={aboutImg} alt="Lady Doctor Smiling" />
+                    </div>
+                    {/* <img className='lg:h-60 md:w-60 lg:m-8 md:m-4 md:float-start w-40 mx-auto my-2 rounded-full' src={aboutImg} alt="Lady Doctor Smiling" /> */}
                     <div className='lg:w-2/3 p-2'>
                         <h1 className='lg:text-4xl md:text-3xl text-2xl font-semibold my-3'>
                             About Us

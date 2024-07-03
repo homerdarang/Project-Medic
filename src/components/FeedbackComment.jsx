@@ -1,12 +1,43 @@
 import { React, useEffect, useState } from 'react';
 function FeedbackComment() {
+    const [error, setError] = useState();
+    const [isLoading, setIsLoading] = useState(false);
     const [records, setRecords] = useState([]);
+    const TIMER_SEC = 1000;
+
+    const BASE_URL = 'http://localhost:3031';
+
+    
     useEffect(() => {
-        fetch('http://localhost:3031/users')
-            .then(response => response.json())
-            .then(data => setRecords(data))
-            .catch(err => console.log(err))
-    }, [])
+        setIsLoading(true);
+        const timer = setTimeout(() => {
+            const feedbackComment = async () => {
+                try {
+                    const response = await fetch(`${BASE_URL}/users`);
+                    const post = await response.json();
+                    setRecords(post)
+                } catch (error) {
+                    setError(error);
+                } finally {
+                    setIsLoading(false)
+                }
+            }
+            feedbackComment();
+            return () => clearTimer(timer)
+        }, TIMER_SEC)
+        
+        
+    }, []);
+
+    if(isLoading) {
+        return <div className='loader mx-auto my-20 text-4xl'></div>
+    }
+
+    if(error) {
+        return <div className='bg-red-400 text-white px-2 py-4 '>
+            <p>There is an error here: {error}</p>
+        </div>
+    }
 
     return (
         <>

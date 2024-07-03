@@ -1,39 +1,78 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../Footer'
+import { useNavigate } from 'react-router-dom'
+
+import { RiMailSendLine } from 'react-icons/ri';
+
 
 function Contact() {
-    function handleSubmit(e) {
-        e.preventDefault()
-        console.log('Submitted!');
-    }
+    const navigate = useNavigate;
+    
+    const [replyTo, setReplyTo] = useState('');
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+    const [result, setResult] = useState('');
+    // const [status, setStatus] = useState('');
+    const [error, setError] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        const requestBody = {
+            sendto: 'homerdarang@icloud.com',
+            replyTo,
+            name,
+            message,
+            isHtml: 'false'
+        };
+
+        const url = 'https://mail-sender-api1.p.rapidapi.com/';
+        const option = {
+            method: 'POST',
+            headers: {
+                'x-rapidapi-key': 'aa4bb93377msh5b04192fb75f0a8p11c396jsn81fbd93a431d',
+                'x-rapidapi-host': 'mail-sender-api1.p.rapidapi.com',
+                'Content-Type': 'application/json',
+            },
+            message: JSON.stringify(requestBody),
+        };
+
+        try {
+            const response = await fetch(url, option);
+            const result = await response.json();
+            const status = response.ok ? 'Success' : 'Error';
+            console.log(`Status: ${status}`)
+            setResult(result)
+            console.log(`APi response: ${result}`)
+        } catch(err){
+            setError(`Error: ${err}`)
+        }
+    };
 
     return (
+        
         <>
-            <div className='my-60 w-1/4 m-auto'>
-                <h1 className='font-bold text-4xl text-blue-400 my-3'>Message Us!</h1>
-                <form className='grid' onSubmit={handleSubmit}>
-                    <label className='font-light text-gray-600 mt-7' htmlFor="name">Full Name</label>
-                    <input className='form-input px-4 py-3 border-b-[2px] border-gray-400 font-extralight focus:outline-none'
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder='Juan Dela Cruz' />
-
-                    <label className='font-light text-gray-600 mt-7' htmlFor="email">Email</label>
-                    <input className='form-input px-4 py-3 border-b-[2px] border-gray-400 font-extralight focus:outline-none'
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder='juan@email.com' />
-
-                    <label className='font-light text-gray-600 mt-7' htmlFor="comment">Comment here:</label>
-                    <textarea className='form-textarea px-4 py-3 border-b-[2px] border-gray-400 font-extralight focus:outline-none'
-                        name="comment"
-                        id="comment"
-                        cols="30"
-                        placeholder='You are doing great!'></textarea>
-
-                    <button className='mt-7 px-4 py-3 bg-blue-400 text-gray-800 rounded-md hover:bg-blue-600 hover:text-white transition-all ease-linear'>Submit</button>
+            <div>
+                <h1 className='lg:text-3xl md:text-2xl text-xl font-medium text-blue-400 p-8 flex place-items-center'>
+                    <RiMailSendLine className='text-blue-400 mr-2'/>
+                    Send a message
+                </h1>
+                <form className='grid my-10' onSubmit={'/'}>
+                    <div>
+                        <label className='text-xl font-light' htmlFor="email">Your Email:</label>
+                        <input
+                            onChange={(e) => setReplyTo(e.target.value)}
+                            value={replyTo} 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            required
+                            placeholder='youremail@email.com'
+                            className='block px-2 py-1 my-6 outline-none border-b-2 border-gray-300 lg:w-96 md:w-80 w-54 text-base' />
+                    </div>
+                    <div>
+                        
+                    </div>
                 </form>
             </div>
             <Footer />

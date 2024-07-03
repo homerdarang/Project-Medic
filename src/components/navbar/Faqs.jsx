@@ -1,4 +1,5 @@
 import React from 'react';
+
 import faqsImg from '../../assets/faqs.jpg';
 
 import { BsQuestionCircleFill } from "react-icons/bs";
@@ -7,6 +8,7 @@ import { AiFillSchedule } from "react-icons/ai";
 import { BsCalendar2RangeFill } from "react-icons/bs";
 import { MdPrivacyTip } from "react-icons/md";
 import { MdContactSupport } from "react-icons/md";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 import GeneralFaqs from '../frequently_asked_questions/GeneralFaqs';
 import BookingFaqs from '../frequently_asked_questions/BookingFaqs';
@@ -15,11 +17,17 @@ import PrivacySecurityFaqs from '../frequently_asked_questions/PrivacySecurityFa
 import AdditionalSupportFaqs from '../frequently_asked_questions/AdditionalSupportFaqs';
 import Footer from '../Footer';
 
+import { useNavigate, Link } from 'react-router-dom';
+
 function Faqs() {
 
     return (
         <>
             <div className='w-2/3 py-44  mx-auto text-gray-800 z-[1]'>
+                <Link to={'/'} className='border-2 ps-5 py-2 pe-4 max-w-32 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
+                    <RiArrowGoBackFill className='me-2' />
+                    Go Back
+                </Link>
                 <div className='md:flex md:justify-evenly md:place-items-center '>
                     <div className=''>
                         <h1 className='lg:text-4xl md:text-3xl text-2xl font-bold my-6 flex place-items-center'>
