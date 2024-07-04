@@ -21,10 +21,10 @@ function Donate() {
                     <h1 className='md:text-2xl text-xl'>Choose your payment method</h1>
                 </div>
                 <div className='grid gap-4 md:w-2/3 w-5/6 m-auto'>
-                    <button onClick={() => navigate(-1)} className='border-2 ps-5 py-2 max-w-32 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
+                    <Link to={'/'} className='border-2 ps-5 py-2 max-w-32 hover:bg-gray-50 transition-all ease-linear flex place-items-center'>
                         <RiArrowGoBackFill className='me-2' />
                         Go Back
-                    </button>
+                    </Link>
                     <div className='mb-5 grid'>
                         <p className='text-xl'>How would you like to donate?</p>
                         <small className='text-sx text-gray-500'>Together, We Make a Difference ❤️</small>
