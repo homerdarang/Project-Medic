@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 // import Footer from '../Footer'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { RiMailSendLine, RiArrowGoBackFill } from 'react-icons/ri';
 
 
 function Contact() {
-    const navigate = useNavigate();
     
     const [replyTo, setReplyTo] = useState('');
     const [name, setName] = useState('');
@@ -19,9 +18,9 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // if(!name || !email) {
+        // if(!name || !replyTo) {
         //     setError('Input fields cannot be empty!')
-        // } else if (!email.includes('@gmail.com') || !RiEmotionNormalLine.includes('@icloud.com')) {
+        // } else if (!replyTo.includes('@gmail.com') || !replyTo.includes('@icloud.com')) {
         //     setError('Email must be a gmail or iCloud email')
         // } else {
         //     setError(status)
@@ -55,13 +54,13 @@ function Contact() {
                 <div className='grid place-items-center px-5 py-7 bg-gray-200 rounded-md w-1/2 m-auto bg-slate-300 absolute left-0 right-0 top-1/2'>
                     <RiMailSendLine className='text-3xl text-green-500' />
                     <h1 className='text-4xl text-green-500 mt-6'>Message Sent!</h1>
-                    <button className='px-6 py-2 mt-8 rounded-full text-slate-700 bg-gray-50' onClick={() => navigate(-1)}>Close</button>
+                    <Link className='px-6 py-2 mt-8 rounded-full text-slate-700 bg-gray-50' to={'/'}>Close</Link>
                 </div>
             </div> : <div>
                 <div className='grid place-items-center px-5 py-7 bg-gray-200 rounded-md w-1/2 m-auto bg-slate-300 absolute left-0 right-0 top-1/2'>
                     <RiMailSendLine className='text-3xl text-red-500' />
                     <h1 className='text-4xl text-red-500 mt-6'>Message Sent!</h1>
-                    <button className='px-6 py-2 mt-8 rounded-full text-white bg-red-500' onClick={() => navigate(-1)}>Close</button>
+                    <Link className='px-6 py-2 mt-8 rounded-full text-white bg-red-500' to={'/'}>Close</Link>
                 </div>
             </div>; // Check if the response status is 200 (success) or not;
             setStatus(status)
@@ -127,12 +126,13 @@ function Contact() {
                             required
                             cols="20"
                             rows="5"
-                            className='px-2 py-1 my-6 outline-none border-b-2 border-gray-300 lg:w-96 md:w-80 w-54 text-base'></textarea>
+                            className='px-2 py-1 my-6 outline-none border-b-2 border-gray-300 lg:w-96 md:w-80 w-54 text-base' />
                     </div>
                     <button className='px-4 py-2 my-8 border-2 border-gray-300 hover:bg-gray-300 transition-all ease-linear'>Send message</button>
                 </form>
                 {status}
                 {result && <p>Result: {result.message}</p>}
+                {/* {error && <p className='bg-red-400 p-4 text-white'>{error}</p>} */}
                 {error}
             </div>
             {/* <Footer /> */}

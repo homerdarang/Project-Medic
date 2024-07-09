@@ -1,26 +1,45 @@
 import React, { useState } from 'react';
-// import { format, addDays, startOfMonth, endOfMonth, startOfWeek, endOfWeek, isSameDay, isSunday } from 'date-fns';
+    import { format, parse, addDays, startOfMonth, endOfMonth, startOfWeek, endOfWeek, isSameDay, isSunday, startOfDay} from 'date-fns';
 
-import ScheduleSelector from 'react-schedule-selector';
 
-function CalendarPicker () {
-    const [schedule, setSchedule] = useState([]);
+function CalendarPicker ({onScheduleSelect}) {
+    const [selectDate, setSelectDate] = useState('');
+    const [selectTime, setSelectTime] = useState('');
 
-    const handleChange = newSchedule => {
-        setSchedule({schedule: newSchedule})
+    const date = new Date();
+    const tomorrow = addDays(date, 1);
+    const start = startOfDay(date);
+    const startDate = format(start, "dd/MM/yyy");
+    console.log(tomorrow)
+    console.log(startDate);
+
+
+
+
+
+
+
+    const handleSubmit = function(e) {
+        e.preventDefault()
+        if (onScheduleSelect){
+            onScheduleSelect({date: selectDate, time: selectTime})
+        }
     }
 
   return (
     <>
-        <div className='mt-44 w-4/5 mx-auto'>
-            <ScheduleSelector
-                selection={schedule}
-                numDays={6}
-                minTime={12}
-                maxTime={16}
-                hourlyChunks={2}
-                onChange={handleChange}
-            />
+        <div className='grid place-items-center mt-48'>
+            <form onSubmit={handleSubmit} >
+                <div>
+                    <input 
+                        type="date" 
+                        name="" 
+                        id=""
+                        value={selectDate}
+                        onChange={(e) => setSelectDate(e.target.value)}
+                        />
+                </div>
+            </form>
         </div>
     </>
   );

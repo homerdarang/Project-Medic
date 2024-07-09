@@ -14,7 +14,8 @@ import HealthAndWellness from './components/services_offeed/HealthAndWellness';
 import SleepConsultation from './components/services_offeed/SleepConsultation';
 import ParentingTechniques from './components/services_offeed/ParentingTechniques';
 import Donate from './components/Donate';
-import CalendarPicker from './components/CalendarPicker';
+import PickerCalendar from './components/PickerCalendar';
+// import CalendarPicker from './components/CalendarPicker';
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
           <Route path='/sleep-consultation' element={<SleepConsultation />} />
           <Route path='/parenting-techniques' element={<ParentingTechniques />} />
           <Route path='/donate' element={<Donate />} />
-          <Route path='/book-now' element={<CalendarPicker maxDate={new Date(2024, 11, 31)} />} />
+          {/* <Route path='/book-now' element={<CalendarPicker />} /> */}
+          <Route path='/book-now' element={<PickerCalendar />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>
