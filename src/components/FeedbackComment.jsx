@@ -10,22 +10,35 @@ function FeedbackComment() {
     
     useEffect(() => {
         setIsLoading(true);
-        const timer = setTimeout(() => {
-            const feedbackComment = async () => {
-                try {
-                    const response = await fetch(`${BASE_URL}/users`);
-                    const post = await response.json();
-                    setRecords(post)
-                } catch (error) {
-                    setError(error);
-                } finally {
-                    setIsLoading(false)
-                }
-            }
-            feedbackComment();
-            return () => clearTimer(timer)
-        }, TIMER_SEC)
+        // const timer = setTimeout(() => {
+        //     const feedbackComment = async () => {
+        //         try {
+        //             const response = await fetch(`${BASE_URL}/users`);
+        //             const post = await response.json();
+        //             setRecords(post)
+        //         } catch (error) {
+        //             setError(error);
+        //         } finally {
+        //             setIsLoading(false)
+        //         }
+        //     }
+        //     feedbackComment();
+        //     return () => clearTimer(timer)
+        // }, TIMER_SEC)
         
+
+        const times = setTimeout( async () => {
+            try {
+                const res = await fetch(`${BASE_URL}/users`);
+                const post = await res.json();
+                setRecords(post)
+            } catch (error) {
+                setError(error)
+            } finally {
+                setIsLoading(false)
+            }
+            return () => clearTimeout(times);
+        }, TIMER_SEC);
         
     }, []);
 
